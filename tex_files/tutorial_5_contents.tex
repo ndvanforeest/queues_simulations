@@ -5,9 +5,9 @@ In this final tutorial we consider the case in which business and economy class 
 In fact, we are going to use simulation to compare different ways to organize the queueing system.
 One way to organize the server allocation is like this: there is one server strictly allocated to business class customers, and there are $c$, say, servers strictly used by the economy class customers.
 Another way is like this.
-There are still one business server and $c$ economy servers, but when the business server is free, this server takes just one economy customer in service (assuming there is such customer in queue).
+There are still one business server and $c$ economy servers, but when the business server is free, this server takes just one economy customer in-service (assuming there is such customer in queue).
 When, after this service, there is still no business customer in queue, the business server serves a second economy customer.
-Once a business customer arrives, the business server finishes the economy customer (if there is any in service), and then serves the business customer.
+Once a business customer arrives, the business server finishes the economy customer (if there is any in-service), and then serves the business customer.
 We use a similar policy for serving business customers by free economy class server.
 The problem is of course to figure out which of these policies is best.
 
@@ -699,7 +699,7 @@ case2()
     \begin{enumerate}
     \item First, check whether the our simulator is indeed correct.
       Is there a specific queue for business class customers?
-      If so, do the business server(s), when idle, indeed take economy class customers in service?
+      If so, do the business server(s), when idle, indeed take economy class customers in-service?
     \item You'll need real data to see whether our simple arrival process and service distributions are realistic.     I suppose most of this is already known. For instance, the number of customers on the plain is known, as is the number of business customers. Service times can obtained from the desks, either by measuring, or by using the times the boarding passes are printed.
     \item Once you have good data, vary one parameter at a time, and report the results \emph{graphically}.
       People typically want to see trends; graphs are indispensable for this.
