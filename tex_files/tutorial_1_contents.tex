@@ -58,7 +58,7 @@ In other words, we compute  the empirical distribution of $\{X_k\}$  as
 where the \emph{indicator function} is $\1{X_k\leq t}=1$ if $X_k\leq t$ and $\1{X_k\leq t}=0$
 if $X_k> t$.
 
-% In the three panels in Figure~\ref{fig:uniformfew} we show the emperical distribution for three different cases.
+% In the three panels in Figure~\ref{fig:uniformfew} we show the empirical distribution for three different cases.
 % In the first example, we take $N=1$ patient and let the computer generate $n=100$ uniformly distributed numbers on the set $[4, 6]$.
 % Thus, the time between two visits of this single patient is somewhere between $4$ and $6$ hours, and the average inter-arrival times $\E X = 5$.
 % For the  second simulation we take $n=100$ visits for $N=3$ patients, and in the third, $N=10$ patients.  We add as a reference (the continuous curve) the density of the exponential distribution $\lambda e^{-\lambda t}$ for $\lambda=1/5$, $\lambda=3/5$ and $\lambda=10/5$, respectively.
@@ -649,7 +649,7 @@ Study this code by reading the documentation (on the web) of the following funct
 \begin{exercise}
   Generate 100 random inter-arrival times $\sim U[4,6]$ for 3 individual patients.
   Then use the code above to compute the inter-arrival times of the merged stream.
-  Plot the emperical cdf of the merged inter-arrival times, and compare the emperical cdf to the exponential distribution with the correct mean (which should be $\lambda = 3/5$).
+  Plot the empirical cdf of the merged inter-arrival times, and compare the empirical cdf to the exponential distribution with the correct mean (which should be $\lambda = 3/5$).
   Also compute the Kolmogorov-Smirnov statistic for this case.
 
   What is the effect of increasing the number of patients from $N=1$ to $N=3$?
@@ -777,7 +777,7 @@ Can we see this property in the data obtained by  simulation?
   \begin{pynotangle}
     a = a[a>s]
   \end{pynotangle}
-With this,  modify one of the above functions in which we compared the emperical distribution of the data to the theoretical distribution. Take $s=0.5$.
+With this,  modify one of the above functions in which we compared the empirical distribution of the data to the theoretical distribution. Take $s=0.5$.
 
   \begin{solution}
 Here is the answer.
@@ -890,7 +890,7 @@ That is, when the inter-arrival times are exponential with arrival rate $\lambda
 
 \begin{exercise}
   With the code below we can compute the number of arrivals per interval for the list \pyv{A} that contains the arrival times of patients.
-  Then we compare the emperical distribution of the number of arrivals in an interval  and compare it to the Poisson distribution with the same mean. Explain the code, and then run it.
+  Then we compare the empirical distribution of the number of arrivals in an interval  and compare it to the Poisson distribution with the same mean. Explain the code, and then run it.
 \begin{pyverbatim}
 def poisson_1():
     N, L = 10, 1000
